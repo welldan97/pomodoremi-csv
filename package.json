@@ -1,11 +1,16 @@
 {
   "name": "pomodoremi-csv",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "main": "lib/pomodoremi-csv.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "coffee-script": "^1.9.3",
+    "gulp": "^3.9.0",
+    "gulp-coffee": "^2.3.1"
+  }
 }
