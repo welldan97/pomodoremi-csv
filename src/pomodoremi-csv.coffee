@@ -7,13 +7,13 @@ class PomodoremiCSV
   stop: (interval, delay, cb) ->
     if interval.type == 'work'
       data = [
-        interval.name,
-        interval.startTime,
+        interval.name
+        interval.startTime
         interval.stopTime
         interval.tags.join(' ')
       ]
       line ='"' + data.join('", "') + '"'
-      mfs.appendFile LOG_PATH, line, (err) ->
+      fs.appendFile LOG_PATH, line, (err) ->
     cb()
 
 module.exports = PomodoremiCSV
