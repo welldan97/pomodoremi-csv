@@ -12,7 +12,7 @@ class PomodoremiCSV
         interval.stopTime
         interval.tags.join(' ')
       ]
-      line ='"' + data.join('", "') + '"'
+      line ='"' + data.join('", "') + '"\n'
       fs.appendFile LOG_PATH, line, (err) ->
     cb()
 
