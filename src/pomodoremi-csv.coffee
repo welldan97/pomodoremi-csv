@@ -4,16 +4,16 @@ fs = require 'fs'
 
 class PomodoremiCSV
   constructor: (@logPath = LOG_PATH) ->
-  stop: (interval, delay, cb) ->
+  stop: (interval, cb) ->
     if interval.type == 'work'
       data = [
         interval.name
-        interval.startTime
-        interval.stopTime
+        interval.startedAt
+        interval.stoppedAt
         interval.tags.join(' ')
       ]
       line ='"' + data.join('", "') + '"\n'
-      fs.appendFile LOG_PATH, line, (err) ->
+      fs.appendFile @logPath, line, (err) ->
     cb()
 
 module.exports = PomodoremiCSV
